@@ -4,4 +4,3 @@ ultralytics==8.3.79
 numpy
 Pillow
 matplotlib
-libgl1
