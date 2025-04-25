@@ -15,22 +15,29 @@ from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
 RTC_CONFIGURATION = RTCConfiguration(
     {
         "iceServers": [
-            {"urls": "stun:stun.relay.metered.ca:80"},
-            {
+                {
+                "urls": "stun:stun.relay.metered.ca:80",
+              },
+              {
                 "urls": "turn:global.relay.metered.ca:80",
-                "username": "62a780ff22906dc4804b8101",
-                "credential": "INzShUB/OF2KMxIJ",
-            },
-            {
+                "username": "774a87c1f726eebebd6c2abc",
+                "credential": "hfDAZP8jfd6WVNXv",
+              },
+              {
+                "urls": "turn:global.relay.metered.ca:80?transport=tcp",
+                "username": "774a87c1f726eebebd6c2abc",
+                "credential": "hfDAZP8jfd6WVNXv",
+              },
+              {
                 "urls": "turn:global.relay.metered.ca:443",
-                "username": "62a780ff22906dc4804b8101",
-                "credential": "INzShUB/OF2KMxIJ",
-            },
-            {
+                "username": "774a87c1f726eebebd6c2abc",
+                "credential": "hfDAZP8jfd6WVNXv",
+              },
+              {
                 "urls": "turns:global.relay.metered.ca:443?transport=tcp",
-                "username": "62a780ff22906dc4804b8101",
-                "credential": "INzShUB/OF2KMxIJ",
-            },
+                "username": "774a87c1f726eebebd6c2abc",
+                "credential": "hfDAZP8jfd6WVNXv",
+              },
         ]
     }
 )
@@ -169,7 +176,7 @@ class Inference:
                     ann_frame.image(annotated_frame, channels="BGR")
 
                 cap.release()
-            #cv2.destroyAllWindows()
+            cv2.destroyAllWindows()
 
 
 if __name__ == "__main__":
