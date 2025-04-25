@@ -169,7 +169,7 @@ class Inference:
                     ann_frame.image(annotated_frame, channels="BGR")
 
                 cap.release()
-            cv2.destroyAllWindows()
+            #cv2.destroyAllWindows()
 
 
 if __name__ == "__main__":
